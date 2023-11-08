@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="monthlyPane" prefHeight="426.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.MonthlyIncomeController">
+   <children>
+      <Label layoutX="335.0" layoutY="336.0" text="Monthly Income :">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="8.0" layoutY="15.0" onAction="#backToSellingForm" prefHeight="41.0" prefWidth="61.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-left-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="157.0" layoutY="14.0" prefHeight="53.0" prefWidth="507.0" style="-fx-background-color: #01A05E; -fx-background-radius: 50;">
+         <children>
+            <Pane layoutX="238.0" prefHeight="53.0" prefWidth="270.0" style="-fx-background-color: #01A05E;" />
+            <Label layoutX="56.0" layoutY="7.0" text="Monthly Report" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tblReport" layoutX="57.0" layoutY="113.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="clmDate" prefWidth="180.0" text="Date" />
+          <TableColumn fx:id="clmCount" prefWidth="204.0" text="Count" />
+            <TableColumn fx:id="clmTotal" prefWidth="169.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblTotal" layoutX="508.0" layoutY="330.0" prefHeight="39.0" prefWidth="112.0" />
+      <JFXButton layoutX="57.0" layoutY="334.0" onAction="#btnReportPrintOnAction" prefWidth="80.0" style="-fx-background-color: #1071DC;" text="Print" textFill="WHITE" />
+   </children>
+</AnchorPane>

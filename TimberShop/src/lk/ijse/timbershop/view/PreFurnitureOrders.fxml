@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="preOrderPane" prefHeight="426.0" prefWidth="657.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.PreFurnitureOrdersController">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="15.0" onAction="#backtoFurniture" prefHeight="53.0" prefWidth="75.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-left-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Pane layoutX="161.0" layoutY="15.0" prefHeight="53.0" prefWidth="507.0" style="-fx-background-color: #01A05E; -fx-background-radius: 50;">
+         <children>
+            <Pane layoutX="238.0" prefHeight="53.0" prefWidth="270.0" style="-fx-background-color: #01A05E;" />
+            <Label layoutX="56.0" layoutY="7.0" text="Ongoing Orders" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tblLoadOrder" layoutX="52.0" layoutY="99.0" prefHeight="269.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="clmReqId" prefWidth="75.0" text="ReqID" />
+          <TableColumn fx:id="clmFurnitureId" prefWidth="122.0" text="Furniture ID" />
+            <TableColumn fx:id="clmCustomerId" prefWidth="134.0" text="Customer ID" />
+            <TableColumn fx:id="clmReqDate" prefWidth="114.0" text="Req Date" />
+            <TableColumn fx:id="clmPrice" prefWidth="124.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

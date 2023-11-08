@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="orderPane" prefHeight="604.0" prefWidth="1006.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.OrderFormController">
+   <children>
+      <JFXBadge prefHeight="79.0" prefWidth="1006.0" style="-fx-background-color: #183E44;">
+         <children>
+            <Label prefHeight="77.0" prefWidth="625.0" text="LIYANAGE  TIMBER  SHOP" textFill="#aba49d">
+               <font>
+                  <Font name="Poor Richard" size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </JFXBadge>
+      <ListView layoutY="79.0" prefHeight="534.0" prefWidth="212.0" style="-fx-background-color: #183E44;" />
+      <AnchorPane fx:id="tabPane" layoutX="212.0" layoutY="96.0" prefHeight="517.0" prefWidth="794.0">
+         <children>
+            <Pane layoutX="66.0" layoutY="22.0" prefHeight="67.0" prefWidth="728.0" style="-fx-background-color: #01A05E; -fx-background-radius: 50;">
+               <children>
+                  <Pane layoutX="238.0" prefHeight="67.0" prefWidth="490.0" style="-fx-background-color: #01A05E;">
+                     <children>
+                        <Label layoutX="-81.0" layoutY="5.0" text="Available Stock" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="50.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <TableView fx:id="tblAvailableStock" layoutX="74.0" layoutY="149.0" prefHeight="283.0" prefWidth="644.0">
+              <columns>
+                <TableColumn fx:id="clmCode" prefWidth="184.0" text="Item Code" />
+                <TableColumn fx:id="clmName" prefWidth="229.0" text="Item Name" />
+                  <TableColumn fx:id="clmQty" prefWidth="229.0" text="Available Qty" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Separator layoutY="63.0" opacity="0.17" prefHeight="35.0" prefWidth="212.0" />
+      <JFXButton layoutY="81.0" onAction="#customerOrderAction" prefHeight="67.0" prefWidth="212.0" text="Place Customer Order" textFill="WHITE" />
+      <JFXButton layoutY="150.0" onAction="#supplierOrderAction" prefHeight="67.0" prefWidth="212.0" text="Order From Supplier" textFill="#f8f8f8" />
+      <JFXButton layoutY="546.0" onAction="#backToMainWindow" prefHeight="67.0" prefWidth="212.0" text="Back" textFill="WHITE" />
+      <Separator layoutY="132.0" opacity="0.17" prefHeight="35.0" prefWidth="212.0" />
+      <Separator layoutY="545.0" opacity="0.17" prefHeight="2.0" prefWidth="212.0" />
+      <Separator layoutX="207.0" layoutY="79.0" orientation="VERTICAL" prefHeight="534.0" prefWidth="11.0" />
+   </children>
+</AnchorPane>

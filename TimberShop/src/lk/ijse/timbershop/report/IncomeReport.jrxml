@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IncomeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fbe26de0-e9d7-45bb-925a-418d7c710390">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="total" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="date" class="java.lang.String"/>
+	<field name="count" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="20" width="180" height="30" uuid="8f1f984c-b90d-4056-bb51-33a19ef3353b"/>
+				<text><![CDATA[Liyanage Timber Shop Monthly Income]]></text>
+			</staticText>
+			<line>
+				<reportElement x="131" y="11" width="239" height="1" uuid="38b6302e-8cee-4e7a-b812-0cde4e414f84"/>
+			</line>
+			<line>
+				<reportElement x="370" y="10" width="1" height="31" uuid="89ec0c60-913a-48d5-9918-b9b4429d98d1"/>
+			</line>
+			<line>
+				<reportElement x="130" y="40" width="240" height="1" uuid="2ecfd2f1-fa09-4800-b33b-085a6c149780"/>
+			</line>
+			<line>
+				<reportElement x="131" y="11" width="1" height="29" uuid="e1603517-4923-4aaa-b1d9-a0bb496b79af"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="100" height="30" uuid="30158ad1-df9e-4113-9084-0708caedfa2b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="196a9f0d-4832-42ad-8b21-1e4b6ecf3683"/>
+				</reportElement>
+				<text><![CDATA[date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="100" height="30" uuid="a31e1e38-8876-426a-8a7b-e3fa43bcc705">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32492abb-d5b6-4a24-aff7-3a7127a70993"/>
+				</reportElement>
+				<text><![CDATA[count]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="0" width="100" height="30" uuid="8bd9af51-d407-456a-8700-f1c0c848a214">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61224555-f0db-4c22-b73a-3a9076e8551d"/>
+				</reportElement>
+				<text><![CDATA[total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="40" y="10" width="100" height="30" uuid="67f39072-38d6-4fdf-98cb-c469b95fee74">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="196a9f0d-4832-42ad-8b21-1e4b6ecf3683"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="10" width="100" height="30" uuid="99801a71-2bde-4d94-a167-852b7767ea88">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="32492abb-d5b6-4a24-aff7-3a7127a70993"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="439" y="10" width="105" height="30" uuid="d87abe2c-66e4-45e2-8946-8dcb450813e0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="61224555-f0db-4c22-b73a-3a9076e8551d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="43" splitType="Stretch">
+			<textField>
+				<reportElement x="439" y="0" width="100" height="30" uuid="e76ca141-6c08-4dfb-9030-d251d98f2224"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

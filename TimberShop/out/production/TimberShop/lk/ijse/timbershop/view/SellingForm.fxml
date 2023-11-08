@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXBadge?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sellingPane" prefHeight="510.0" prefWidth="851.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.SellingFormController">
+   <children>
+      <JFXBadge prefHeight="78.0" prefWidth="859.0" style="-fx-background-color: #183E44;">
+         <children>
+            <Label prefHeight="77.0" prefWidth="511.0" text="Liyanage Timber Shop" textFill="#aba49d">
+               <font>
+                  <Font name="Poor Richard" size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </JFXBadge>
+      <ListView layoutY="78.0" prefHeight="432.0" prefWidth="200.0" style="-fx-background-color: #183E44;" />
+      <Separator layoutY="78.0" opacity="0.17" prefWidth="200.0" />
+      <JFXButton layoutY="81.0" onAction="#monthlyIncomeAction" prefHeight="66.0" prefWidth="200.0" text="Monthly Income Report" textFill="WHITE" />
+      <JFXButton layoutY="444.0" onAction="#backtMainWindow" prefHeight="66.0" prefWidth="200.0" text="Back" textFill="WHITE" />
+      <Separator layoutY="146.0" opacity="0.17" prefWidth="200.0" />
+      <Separator layoutY="443.0" opacity="0.17" prefWidth="200.0" />
+      <AnchorPane fx:id="tabPane" layoutX="202.0" layoutY="81.0" prefHeight="426.0" prefWidth="657.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="491.0" fitWidth="426.0" layoutX="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/report-your-income-abstract-concept-vector-illustration_107173-20468.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

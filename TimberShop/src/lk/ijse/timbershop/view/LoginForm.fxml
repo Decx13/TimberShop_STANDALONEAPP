@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" prefHeight="526.0" prefWidth="901.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.LoginFormController">
+   <children>
+      <JFXColorPicker layoutX="41.0" layoutY="46.0" />
+      <ImageView fitHeight="784.0" fitWidth="966.0" layoutX="-65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/76760-Road-Forest-Log-WoodRoad-4k-Ultra-HD-Wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="470.0" layoutY="14.0" prefHeight="498.0" prefWidth="408.0" style="-fx-background-color: #00897B; -fx-background-radius: 16;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="96.0" layoutX="151.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-user-100.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="24.0" layoutY="183.0" text="User Name" textFill="#fcfcfc">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtName" focusColor="#00ff15" layoutX="24.0" layoutY="215.0" prefHeight="31.0" prefWidth="339.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="24.0" layoutY="274.0" text="Password" textFill="#fcfcfc">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="logBtn" layoutX="154.0" layoutY="408.0" onAction="#loginActionBtn" opacity="0.7" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: black;" text="Log in" textFill="WHITE" />
+            <JFXPasswordField fx:id="txtPassword" focusColor="#17ff00" layoutX="25.0" layoutY="321.0" prefHeight="31.0" prefWidth="339.0" />
+            <Label fx:id="alertLabel" layoutX="82.0" layoutY="377.0" prefHeight="21.0" prefWidth="269.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

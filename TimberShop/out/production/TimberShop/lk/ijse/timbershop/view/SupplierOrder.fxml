@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="supOrderPane" prefHeight="547.0" prefWidth="794.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.timbershop.controller.SupplierOrderController">
+   <children>
+      <Label layoutX="66.0" layoutY="76.0" text="Order ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="76.0" prefHeight="27.0" prefWidth="52.0" text="Date :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="120.0" prefHeight="27.0" prefWidth="78.0" text="Sup ID :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="159.0" prefHeight="27.0" prefWidth="88.0" text="Item Code ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbItemCode" focusColor="#00ff55" layoutX="37.0" layoutY="192.0" onAction="#itemCodeOnAction" prefHeight="31.0" prefWidth="121.0" />
+      <Label layoutX="682.0" layoutY="159.0" prefHeight="27.0" prefWidth="52.0" text="Qty">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="159.0" prefHeight="27.0" prefWidth="88.0" text="Unit Price">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="641.0" layoutY="192.0" onAction="#txtQtyOnAction" prefHeight="31.0" prefWidth="121.0" />
+      <TextField fx:id="txtUnitPrice" layoutX="493.0" layoutY="192.0" prefHeight="31.0" prefWidth="121.0" />
+      <TableView fx:id="tblOrderCart" layoutX="37.0" layoutY="239.0" prefHeight="200.0" prefWidth="719.0">
+         <columns>
+            <TableColumn fx:id="clmOrderId" prefWidth="99.0" text="S_Order ID" />
+            <TableColumn fx:id="clmSupId" prefWidth="127.0" text="Sup ID" />
+            <TableColumn fx:id="clmItemCode" prefWidth="135.0" text="Item Code" />
+            <TableColumn fx:id="clmQty" prefWidth="103.0" text="Qty" />
+            <TableColumn fx:id="clmPrice" prefWidth="143.0" text="Price" />
+            <TableColumn fx:id="clmAction" prefWidth="111.0" text="Action" />
+         </columns>
+      </TableView>
+      <Separator layoutX="2.0" layoutY="439.0" prefHeight="18.0" prefWidth="794.0" />
+      <JFXButton layoutX="2.0" layoutY="9.0" onAction="#backtoOrderForm" prefHeight="41.0" prefWidth="61.0" text=" ">
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-left-90.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbSupId" focusColor="#00ff1a" layoutX="162.0" layoutY="118.0" prefHeight="31.0" prefWidth="88.0" />
+      <Pane layoutX="157.0" layoutY="14.0" prefHeight="41.0" prefWidth="638.0" style="-fx-background-color: #01A05E; -fx-background-radius: 50;">
+         <children>
+            <Pane layoutX="238.0" prefHeight="41.0" prefWidth="402.0" style="-fx-background-color: #01A05E;" />
+            <Label layoutX="116.0" layoutY="5.0" text="Order From Supplier" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtName" editable="false" layoutX="192.0" layoutY="192.0" prefHeight="31.0" prefWidth="121.0" />
+      <Label layoutX="209.0" layoutY="159.0" prefHeight="27.0" prefWidth="88.0" text="Item name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStock" editable="false" layoutX="345.0" layoutY="192.0" prefHeight="31.0" prefWidth="121.0" />
+      <Label layoutX="334.0" layoutY="159.0" prefHeight="27.0" prefWidth="143.0" text="Available Stock(ft)">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="29.0" layoutY="457.0" onAction="#btnAddToCartOnAction" prefHeight="41.0" prefWidth="143.0" style="-fx-background-color: #3498db; -fx-background-radius: 20;" text="Add to cart" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/cart.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="457.0" onAction="#btnConfirmOrderAction" prefHeight="41.0" prefWidth="143.0" style="-fx-background-color: #005622; -fx-background-radius: 20;" text="Confirm Order" textFill="WHITE">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons8-purchase-order-96.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblOrderId" layoutX="153.0" layoutY="69.0" prefHeight="41.0" prefWidth="78.0" text="Label" />
+      <Label fx:id="lblDate" layoutX="602.0" layoutY="69.0" prefHeight="41.0" prefWidth="78.0" text="Label" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TimberShop/out/production/TimberShop/lk/ijse/timbershop/lib/jfoenix-8.0.8 (1).jar!/" />
+      <root url="jar://$PROJECT_DIR$/TimberShop/out/production/TimberShop/lk/ijse/timbershop/lib/mysql-connector-java-8.0.24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
